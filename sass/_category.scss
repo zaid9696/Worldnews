@@ -1,0 +1,173 @@
+.category{
+    
+    grid-column: center-start / center-end;
+    margin: 3rem 0;
+
+
+    &__first{
+        border-bottom: 3px solid #142055;
+        padding-bottom: 23px;
+        margin-bottom: 3rem;
+
+    }
+    
+    &__content{
+        display: grid;
+      grid-template-columns: 57% 1fr;
+      column-gap: 10px;
+      @media only screen and (max-width:$bp-large) {
+        grid-template-columns: 1fr;
+    }
+
+    }
+
+    &__header{
+        font-size: 4rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #0b4082;
+        border-bottom: 2px solid #b607ff;
+        width: 142px;
+        font-weight: 500;
+        padding-bottom: 4px;
+        margin-bottom: 3.5rem;
+        &.second{
+        border-bottom: 2px solid #ffbe07;
+        width: 187px;
+        }
+        
+    }
+
+    &__backg{
+        background-image: linear-gradient(#000000a6,#000000a6), url(../img/3608.jpg);
+        height: 55vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        color:#fff;
+        display: grid;
+        align-content: space-between;
+        border-left: 5px solid #3c4cab;
+        &.second{
+            background-image: linear-gradient(#000000a6,#000000a6), url(../img/5698.jpg);
+
+        }
+
+        @media only screen and (max-width:$bp-large) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title{
+        margin: 30px;
+        background-color: #142055d1;
+        padding: 18px 19px;
+        width: 70%;
+        border-radius: 3px;
+        @media only screen and (max-width:$bp-small) {
+            width: 90%;
+        }
+        h3{
+            font-size: 2.5rem;
+            font-weight: 500;
+            @media only screen and (max-width:$bp-small) {
+                font-size: 1.9rem;
+            }
+        }
+    }
+
+    &__paragraph{
+        margin: 24px 30px;
+        background-color: #142055de;
+        padding: 18px 19px;
+        width: 70%;
+        border-radius: 3px;
+        @media only screen and (max-width:$bp-small) {
+            width: 90%;
+        }
+         
+        p{
+            font-size: 1.5rem;
+            @media only screen and (max-width:$bp-small) {
+                font-size: 1.1rem;
+                
+            }
+             
+        }
+    }
+
+    &__cards{
+        display: grid;
+    grid-auto-flow: column;
+    column-gap: 15px;
+    @media only screen and (max-width: $bp-small){
+        display: grid;
+        row-gap: 23px;
+        grid-auto-flow: row;
+        justify-items: center;
+    }
+    }
+
+    &__card{
+
+        text-align: center;
+        padding-bottom: 20px;
+        width: 100%;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        @media only screen and (max-width: $bp-small){
+            width: 85%;
+        }
+
+        img{
+            width:100%;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            height:136px ;
+        }
+    }
+
+    &__text{
+        padding: 2px 7px;
+        text-align: left;
+        padding-bottom: 17px;
+        h3{
+            font-size: 1.22rem;
+            color: #142055;
+            border-bottom: 2px solid;
+            padding-bottom: 4px;
+            margin-bottom: 5px;
+            @media only screen and (max-width:$bp-large) {
+                font-size: 1.7rem;
+            }
+        }
+
+        p{
+            font-size: 1.3rem;
+            color: #1f2848;
+            @media only screen and (max-width:$bp-large) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__btn{
+        text-decoration: none;
+        padding: 6px 17px;
+        background: #1b244c;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            background: none;
+            color: #1b2555;
+            border: 2px solid;
+        }
+
+        
+    }
+}

@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap');
+
+$color-primary: #152b79;
+$color-primary-dark: #02152a;
+$color-primary-light: #001257;
+
+// font-family: 'Bad Script', cursive;
+// breakPoints
+$bp-largest: 1140px;
+$bp-large: 940px;
+$bp-medium: 660px;
+$bp-small: 500px;
+$bp-ex-small: 380px;
+
+html{
+
+    font-size: 62.5%; // 1rem = 10px;
+    @media only screen and (max-width: $bp-largest){
+        font-size: 50%;
+    }
+}
+
+
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end]  minmax(2rem, 1fr) [full-end];
+    grid-template-rows: min-content 63vh repeat(4, min-content);
+    @media only screen and (max-width: $bp-large){
+
+        grid-template-rows: min-content min-content repeat(4, min-content);
+        
+
+    }
+    // @media only screen and (max-height: 590px){
+
+    //     grid-template-rows: min-content 118vh repeat(4, min-content);
+
+    // }
+}
+
+
+::selection{
+
+    background-color: #02152a;
+    color: #fff;
+}

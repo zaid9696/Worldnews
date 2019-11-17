@@ -1,0 +1,23 @@
+.article-bg{
+
+    grid-column: center-start / center-end;
+    margin-bottom:3rem;
+
+    &__bg{
+
+        background-image: linear-gradient(#0000, #03152b), url(../img/4043.jpg);
+        background-size: cover;
+        height: 333px;
+        background-position-y: 24%;
+        margin-top: 2rem ;
+    
+    }
+
+    &__description{
+        background: #c7c9cc75;
+        font-size: 1.2rem;
+        font-weight: 100;
+        padding: 4px;
+        color: #5a4447;
+    }
+}

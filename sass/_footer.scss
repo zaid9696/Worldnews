@@ -1,0 +1,226 @@
+.footer{
+
+    background-color: #010a15;
+    grid-column: full-start / full-end;
+    padding:20px 73px;
+    @media only screen and (max-width: $bp-largest){
+
+        padding:20px 8px;
+    }
+    @media only screen and (max-width: $bp-large){
+
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__contact{
+        @media only screen and (max-width: $bp-large){
+
+            text-align: center;
+        }
+    }
+
+    &__logo{
+
+        h2{
+
+            font-size: 3.4rem;
+            color: #fff;
+            font-family: bad script;
+            position: relative;
+            margin-bottom: 12px;
+            
+            &::after{
+                content: '';
+                position: absolute;
+                top: 54px;
+                left: 2px;
+                width: 148px;
+                height: 3px;
+                background-color: #fff;
+                @media only screen and (max-width: $bp-large){
+
+                    top: 46px;
+                    left: 63px;
+                    width: 148px;
+                }
+
+                        
+            }
+
+        }
+
+       
+    }
+
+
+    &__social{
+
+        display: grid;
+    grid-template-columns: min-content min-content;
+    
+    @media only screen and (max-width: $bp-large){
+        grid-template-columns: min-content min-content min-content min-content;
+    }
+    gap:25px;
+
+        img{
+            width: 50px;
+        }
+    }
+
+    &__info{
+        display: grid;
+        grid-auto-flow: column;
+        gap: 125px;
+        grid-template-columns: repeat(3,max-content);
+        @media only screen and (max-width: $bp-large){
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            display: grid;
+            gap: 0px;
+            grid-auto-flow: row;
+            grid-template-columns: 1fr;
+            
+        }
+
+        li{
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                font-size: 1.5rem;
+                color: #9c9c9c;
+                display: block;
+                margin-bottom: 8px;
+                transition: all 0.2s ease-in-out;
+                @media only screen and (max-width: $bp-small){
+                    font-size: 2rem;
+                    
+                }
+                
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+
+        
+
+        h3{
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 15px;
+            margin-top: 16px;
+            @media only screen and (max-width: $bp-small){
+                font-size: 3rem;
+                
+            }
+        }
+    }
+    
+    &__list{
+
+            position: relative;
+            z-index: 2;
+            @media only screen and (max-width: $bp-small){
+                border-bottom: 2px solid #fff;
+                text-align: center;
+                
+            }
+            &:not(:last-child)::after{
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 58px;
+                width: 100%;
+                height: 86%;
+                border-right: 2px solid #fff;
+                z-index: -1;
+                @media only screen and (max-width: $bp-small){
+                  content: none;
+                    
+                }
+            }
+
+     }
+
+     &__signup{
+         
+        text-align: center;
+        h3{
+            font-size: 2.4rem;
+            color: #fff;
+            margin-top: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 23px;
+        }
+     }
+
+     &__signup{
+
+
+        @media only screen and (max-width: $bp-large){
+            width: 90%;
+        }
+        
+     }
+
+     &__form{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input[type='email']{
+            padding: 8px 12px;
+            border-radius: 53px;
+            background: none;
+            color: #fff;
+            color: white;
+            outline: none;
+            margin-bottom: 20px;
+            border: 2px solid;
+            font-size: 1.4rem;
+            width:100%;
+            transition: all 0.2s ease-in-out;
+            @media only screen and (max-width: $bp-small){
+                padding: 14px 12px;
+                font-size: 1.7rem;
+            }
+            &:focus{
+                box-shadow: 0 0px 4px #ffffda;
+
+            }
+        }
+        input[type='submit']{
+            background-color: #2e3244;
+            width: 70%;
+            padding: 8px 0;
+            border-radius: 27px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border: 1px solid;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                box-shadow: 0 0px 4px #ffffda;
+
+            }
+        }
+     }
+
+        
+}

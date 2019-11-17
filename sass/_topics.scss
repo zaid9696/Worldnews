@@ -1,0 +1,47 @@
+.topics{
+
+    grid-column: col-start 3 / col-end 6;
+    background: none;
+    padding: 16px;
+    border: 2px solid #094998;
+    border-radius: 0px;
+    margin: 4rem 0;
+
+    @media only screen and (max-width: $bp-small){
+
+        grid-column: full-start / full-end;
+    }
+    
+    
+
+    ul,li{
+     
+        list-style: none;
+    }
+
+    &__title{
+        display: grid;
+        grid-template-columns: min-content;
+    }
+
+    h3{
+        font-size: 1.6rem;
+        color: #053065;
+        margin-bottom: 8px;
+        border-bottom: 2px solid;
+        padding-bottom: 3px;
+        cursor: pointer;
+    }
+
+    &__items{
+        display: flex;
+    }
+
+    &__item{
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #053065;
+        margin-right: 6px;
+        cursor: pointer;
+    }
+}
